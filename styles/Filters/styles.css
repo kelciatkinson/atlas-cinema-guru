@@ -1,0 +1,34 @@
+.container-filter {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.min-max-year {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.search-movies {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.min-year {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.max-year {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}

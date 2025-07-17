@@ -1,0 +1,25 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #00003c;
+}
+
+.container-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.component-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.main {
+  flex-grow: 1;
+  overflow-y: auto;
+  height: 100vh;
+}

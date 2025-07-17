@@ -1,0 +1,29 @@
+.container-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #54f4d0;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.container-header-user {
+  display: flex;
+  align-items: center;
+  color: #00003c;
+  gap: 10px;
+}
+
+.app-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  color: #00003c;
+  font-weight: bold;
+  font-size: 1.5rem;
+}

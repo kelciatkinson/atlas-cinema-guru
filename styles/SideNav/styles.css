@@ -1,0 +1,48 @@
+.container-sidenav {
+  width: 120px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #1dd2af;
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  align-self: flex-start;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.container-sidenav.expanded {
+  width: 300px;
+  padding-right: 3rem;
+}
+
+.button-sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.5rem 0.75rem;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+  width: 100%;
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+.button-sidenav svg {
+  width: 24;
+  height: 24;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+}
+
+.nav-text {
+  font-size: 0.875rem;
+}

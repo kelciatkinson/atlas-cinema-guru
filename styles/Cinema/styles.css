@@ -1,0 +1,144 @@
+.movie-container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.movie-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.movie-item {
+  position: relative;
+  width: calc(33.333% - 2rem);
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .movie-item {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .movie-item {
+    width: 100%;
+  }
+}
+
+.img-movie {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hover-movie {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.movie-item:hover .hover-movie {
+  display: flex;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.movie-info {
+  margin-top: auto;
+}
+
+.movie-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.movie-synopsis {
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  margin-bottom: 1rem;
+}
+
+.movie-genre {
+  width: 4.5rem;
+  background-color: #1dd2af;
+  border-radius: 25;
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.pagination {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+  gap: 1rem;
+}
+
+.pagination-button {
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #555;
+}
+
+.pagination-button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.page-indicator {
+  font-weight: bold;
+}
+
+.loading,
+.error,
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+}

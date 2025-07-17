@@ -2,7 +2,7 @@
     "openapi": "3.0.2",
     "info": {
         "title": "Movie Titles - API",
-        "description": "This is the API for the cinema guru application.",
+        "description": "This is the API for the Cinema Guru application.",
         "version": "1.0.0"
     },
     "externalDocs": {

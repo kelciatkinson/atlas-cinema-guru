@@ -1,0 +1,60 @@
+.user-activity-feed {
+  flex: 1;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-right: -2rem;
+  overflow-y: auto;
+  background-color: #54f4d0;
+  border-radius: 0.75rem;
+}
+
+.activity-header {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.activity-title {
+  color: #00003c;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.activity-loading {
+  text-align: center;
+  color: #00003c;
+}
+
+.activity-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.activity-item {
+  margin-bottom: 1rem;
+}
+
+.activity-time {
+  font-size: 0.75rem;
+  color: #00003c;
+  margin-bottom: 0.25rem;
+}
+
+.activity-text {
+  font-size: 0.875rem;
+  color: #00003c;
+}
+
+.movie-title-bold {
+  font-weight: bold;
+}
+
+.no-activity {
+  text-align: center;
+  color: #00003c;
+  padding: 3rem 1rem;
+}
+
+.no-activity p {
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}

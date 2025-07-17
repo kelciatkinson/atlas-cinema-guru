@@ -14,32 +14,48 @@ export async function fetchTitles(
   userEmail: string
 ) {
   try {
-    // Get favorites title ids
-    const favorites = (
-      await db
-        .selectFrom("favorites")
-        .select("title_id")
-        .where("user_id", "=", userEmail)
-        .execute()
-    ).map((row) => row.title_id);
+    // Only gets favorites and watch laters if user is logged in
+    let favorites: string[] = [];
+    let watchLater: string[] = [];
 
-    // Get watch later title ids
-    const watchLater = (
-      await db
-        .selectFrom("watchlater")
-        .select("title_id")
-        .where("user_id", "=", userEmail)
-        .execute()
-    ).map((row) => row.title_id);
+    if (userEmail) {
+      // Get favorites ids
+      favorites = (
+        await db
+          .selectFrom("favorites")
+          .select("title_id")
+          .where("user_id", "=", userEmail)
+          .execute()
+      ).map((row) => row.title_id);
 
-    //Fetch titles
-    const titles = await db
+      // Get watch later ids
+      watchLater = (
+        await db
+          .selectFrom("watchlater")
+          .select("title_id")
+          .where("user_id", "=", userEmail)
+          .execute()
+      ).map((row) => row.title_id);
+    }
+
+    let queryBuilder = db
       .selectFrom("titles")
       .selectAll("titles")
       .where("titles.released", ">=", minYear)
-      .where("titles.released", "<=", maxYear)
-      .where("titles.title", "ilike", `%${query}%`)
-      .where("titles.genre", "in", genres)
+      .where("titles.released", "<=", maxYear);
+
+    // Adding search filter if query is NOT empty
+    if (query && query.trim() !== "") {
+      queryBuilder = queryBuilder.where("titles.title", "ilike", `%${query}%`);
+    }
+
+    // Only adds genre filter if genres array is NOT empty
+    if (genres && genres.length > 0) {
+      queryBuilder = queryBuilder.where("titles.genre", "in", genres);
+    }
+
+    // Executes the query and orders results
+    const titles = await queryBuilder
       .orderBy("titles.title", "asc")
       .limit(6)
       .offset((page - 1) * 6)
@@ -53,7 +69,7 @@ export async function fetchTitles(
     }));
   } catch (error) {
     console.error("Database Error:", error);
-    throw new Error("Failed to fetch topics.");
+    throw new Error("Failed to fetch titles.");
   }
 }
 

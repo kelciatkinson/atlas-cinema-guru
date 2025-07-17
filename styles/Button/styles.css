@@ -1,0 +1,18 @@
+.custom-button {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.button-header {
+  color: #00003c;
+  cursor: pointer;
+}
+
+.button-sidenav {
+  color: white;
+  cursor: pointer;
+}
