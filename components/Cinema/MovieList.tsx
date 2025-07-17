@@ -4,7 +4,7 @@ import "@/styles/Cinema/styles.css";
 import Movie from "@/components/Cinema/Movie";
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
-import { TitleType } from "@/types";
+import { TitleType } from "@/lib/types";
 
 interface MovieListProps {
   selectedGenres?: string[];
