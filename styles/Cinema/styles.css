@@ -4,7 +4,11 @@
   margin: 0 auto;
   padding: 2rem;
 }
-
+.page-indicator {
+  color: white;
+  font-weight: 400;
+  font-style: normal;
+}
 .movie-list {
   display: flex;
   justify-content: space-around;
@@ -129,10 +133,6 @@
 .pagination-button:disabled {
   background-color: #999;
   cursor: not-allowed;
-}
-
-.page-indicator {
-  font-weight: bold;
 }
 
 .loading,

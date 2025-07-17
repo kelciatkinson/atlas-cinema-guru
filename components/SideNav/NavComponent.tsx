@@ -41,9 +41,9 @@ const FolderIcon = (props: React.SVGProps<SVGSVGElement>) => (
 const StarIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="50"
-    height="50"
-    viewBox="0 1 33 33"
+    width="33"
+    height="33"
+    viewBox="0 0 33 33"
     fill="none"
     {...props}
   >

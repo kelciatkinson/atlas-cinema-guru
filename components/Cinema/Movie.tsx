@@ -10,9 +10,9 @@ import { TitleType } from "@/lib/types";
 
 const StarIcon = ({ color = "currentColor" }) => (
   <svg
-    width="50"
-    height="50"
-    viewBox="0 1 33 33"
+    width="33"
+    height="33"
+    viewBox="0 0 33 33"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
